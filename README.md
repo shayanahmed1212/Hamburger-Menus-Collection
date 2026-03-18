@@ -4,11 +4,11 @@
 
 <br/>
 
-![HTML](https://img.shields.io/badge/HTML5-c77dff?style=for-the-badge&logo=html5&logoColor=white&labelColor=1a0a2e)
-![CSS](https://img.shields.io/badge/CSS3-c77dff?style=for-the-badge&logo=css3&logoColor=white&labelColor=1a0a2e)
-![Animations](https://img.shields.io/badge/CSS%20Animations-c77dff?style=for-the-badge&labelColor=1a0a2e)
-![Menus](https://img.shields.io/badge/Menus-6%20Designs-c77dff?style=for-the-badge&labelColor=1a0a2e)
-![Age](https://img.shields.io/badge/Built%20at%20Age-13-c77dff?style=for-the-badge&labelColor=1a0a2e)
+<img src="https://img.shields.io/badge/HTML5-c77dff?style=for-the-badge&amp;logo=html5&amp;logoColor=white&amp;labelColor=1a0a2e" alt="HTML"/>
+<img src="https://img.shields.io/badge/CSS3-c77dff?style=for-the-badge&amp;logo=css3&amp;logoColor=white&amp;labelColor=1a0a2e" alt="CSS"/>
+<img src="https://img.shields.io/badge/CSS%20Animations-c77dff?style=for-the-badge&amp;labelColor=1a0a2e" alt="Animations"/>
+<img src="https://img.shields.io/badge/Menus-6%20Designs-c77dff?style=for-the-badge&amp;labelColor=1a0a2e" alt="Menus"/>
+<img src="https://img.shields.io/badge/Built%20at%20Age-13-c77dff?style=for-the-badge&amp;labelColor=1a0a2e" alt="Age"/>
 
 <br/>
 
@@ -51,7 +51,7 @@ This collection showcases a variety of navigation menus — from sliding sidebar
   🔀  5 · Switch Window Menu
   ✖️  6 · Animated Menu
   ─────────────────────────
-  All built with HTML & CSS only
+  All built with HTML &amp; CSS only
 ```
 
 </td>
