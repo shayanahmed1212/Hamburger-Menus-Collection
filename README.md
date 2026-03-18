@@ -1,19 +1,20 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0a2e,50:2d1b5e,100:1a0a2e&height=210&section=header&text=Interactive%20Nav%20Collection&fontSize=38&fontColor=c77dff&fontAlignY=42&desc=Hamburger%20Menus%20%7C%20CSS%20Animations%20%7C%20HTML%20%26%20CSS&descAlignY=63&descColor=e0aaff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0a0f1e,50:0d1f3c,100:0a1628&amp;height=210&amp;section=header&amp;text=Smart%20Robot%20Car%20%7C%20Arduino&amp;fontSize=38&amp;fontColor=00cfff&amp;fontAlignY=42&amp;desc=Bluetooth%20Control%20%7C%20Obstacle%20Avoidance%20%7C%20Voice%20Navigation&amp;descAlignY=63&amp;descColor=7de8ff" width="100%"/>
 
 <br/>
 
-![HTML](https://img.shields.io/badge/HTML5-c77dff?style=for-the-badge&logo=html5&logoColor=white&labelColor=1a0a2e)
-![CSS](https://img.shields.io/badge/CSS3-c77dff?style=for-the-badge&logo=css3&logoColor=white&labelColor=1a0a2e)
-![Animations](https://img.shields.io/badge/CSS%20Animations-c77dff?style=for-the-badge&labelColor=1a0a2e)
-![Menus](https://img.shields.io/badge/Menus-6%20Designs-c77dff?style=for-the-badge&labelColor=1a0a2e)
-![Age](https://img.shields.io/badge/Built%20at%20Age-13-c77dff?style=for-the-badge&labelColor=1a0a2e)
+![Arduino](https://img.shields.io/badge/Arduino-Uno-00cfff?style=for-the-badge&logo=arduino&logoColor=white&labelColor=0a0f1e)
+![Language](https://img.shields.io/badge/Language-C%2FC%2B%2B-00cfff?style=for-the-badge&logo=cplusplus&logoColor=white&labelColor=0a0f1e)
+![Bluetooth](https://img.shields.io/badge/Bluetooth-HC--05%2F06-00cfff?style=for-the-badge&logo=bluetooth&logoColor=white&labelColor=0a0f1e)
+![Sensor](https://img.shields.io/badge/Sensor-HC--SR04-00cfff?style=for-the-badge&labelColor=0a0f1e)
+![License](https://img.shields.io/badge/License-Educational-00cfff?style=for-the-badge&labelColor=0a0f1e)
 
 <br/>
 
-> A collection of **6 interactive hamburger menu designs** built with pure **HTML &amp; CSS**.
-> Crafted at age 13 — experimenting with layouts, transitions, and creative CSS animations.
+> An Arduino-based robot car with **three control modes** — Bluetooth manual driving,
+> autonomous obstacle avoidance, and voice command navigation.
+> Built to demonstrate real-time embedded decision making and hardware–software integration.
 
 <br/>
 
@@ -23,35 +24,42 @@
 
 <br/>
 
-## 📌 &nbsp;Overview
+## 📌 &nbsp;Project Overview
 
 <table>
 <tr>
-<td width="50%" valign="top">
+<td width="55%" valign="top">
 
-This collection showcases a variety of navigation menus — from sliding sidebars to full-screen overlays — each built with only HTML &amp; CSS. No JavaScript frameworks, no dependencies.
+The Smart Robot Car operates across multiple environments using switchable control strategies. An **ultrasonic sensor mounted on a servo motor** continuously scans surroundings to measure distances, enabling autonomous real-time navigation decisions.
 
-**What makes each menu unique:**
+This project was built to deepen understanding of:
 
-- ✅ Pure CSS transitions &amp; keyframe animations
-- ✅ Different trigger &amp; reveal mechanics
-- ✅ Reusable and easy to adapt
-- ✅ Each design is self-contained
+- ✅ Microcontroller programming
+- ✅ Sensor &amp; actuator integration
+- ✅ DC motor control via driver shield
+- ✅ Embedded logic and multi-mode system design
 
 </td>
-<td width="50%" valign="top">
+<td width="45%" valign="top">
 
 ```
-  Menu Designs at a Glance
-  ─────────────────────────
-  🗂️  1 · Aside Menu
-  🔵  2 · Radial Menu
-  🖥️  3 · Full-Page Menu
-  ⭕  4 · Circle Aside Menu
-  🔀  5 · Switch Window Menu
-  ✖️  6 · Animated Menu
-  ─────────────────────────
-  All built with HTML & CSS only
+        ┌─────────────────┐
+        │   Serial Input  │  ← Bluetooth / Voice
+        └────────┬────────┘
+                 │
+        ┌────────▼────────┐
+        │  Mode Selector  │
+        └──┬──────┬───┬───┘
+           │      │   │
+      ┌────▼─┐ ┌──▼─┐ ┌▼──────┐
+      │  BT  │ │Auto│ │ Voice │
+      └────┬─┘ └──┬─┘ └┬──────┘
+           └──────┴────┘
+                  │
+        ┌─────────▼────────┐
+        │   Motor Driver   │
+        │  (L293D Shield)  │
+        └──────────────────┘
 ```
 
 </td>
@@ -62,97 +70,168 @@ This collection showcases a variety of navigation menus — from sliding sidebar
 
 ---
 
-## 🍔 &nbsp;Menu Collection
+## ⚙️ &nbsp;Features
 
 <br/>
 
-### &nbsp;1 · Aside Menu
+<table>
+<tr>
+<td align="center" width="33%">
 
-> A sliding sidebar navigation that pushes in from the side.
+**🔵 Bluetooth Control**
 
-<div>
-  <img src="https://github.com/user-attachments/assets/3689454a-afe4-4594-a01f-54d0d42a0005" width="400"/>
-  <img src="https://github.com/user-attachments/assets/64fdb003-727c-4a9f-a4fc-517608c62a08" width="400"/>
-</div>
+Manual driving via serial
+Bluetooth commands.
+Supports F / B / L / R / Stop
+with live mode switching.
 
-<br/>
+</td>
+<td align="center" width="33%">
 
----
+**🚧 Obstacle Avoidance**
 
-### &nbsp;2 · Radial Menu
+Autonomous navigation using
+HC-SR04 + servo scan.
+Compares left/right distances
+and chooses the safest path.
 
-> Circular fan-out menu — items expand outward like a floating action button.
+</td>
+<td align="center" width="33%">
 
-<div>
-  <img src="https://github.com/user-attachments/assets/a606b87b-8388-45ba-9eae-e8399b3cf70b" width="400"/>
-  <img src="https://github.com/user-attachments/assets/0bfdc3c3-8ae1-4c43-a2e2-bef7e7bf7be5" width="400"/>
-</div>
+**🎙️ Voice Control**
 
-<br/>
+Predefined voice commands
+sent over serial.
+Movement validated against
+live sensor feedback.
 
----
-
-### &nbsp;3 · Full-Page Menu
-
-> An overlay that takes over the entire screen on trigger.
-
-<div>
-  <img src="https://github.com/user-attachments/assets/8dbc66f9-b269-4b30-a988-ec5c7f0419b1" width="400"/>
-  <img src="https://github.com/user-attachments/assets/b2c2d562-0705-4c2c-8929-d30d8ca201e4" width="400"/>
-</div>
-
-<br/>
-
----
-
-### &nbsp;4 · Circle Aside Menu
-
-> Sidebar that expands outward from a circular anchor point.
-
-<div>
-  <img src="https://github.com/user-attachments/assets/53f09133-18b4-4d92-8f07-2446be4767b7" width="400"/>
-  <img src="https://github.com/user-attachments/assets/d2c0fd54-9f90-42cf-9a79-9e7485342f32" width="400"/>
-</div>
+</td>
+</tr>
+</table>
 
 <br/>
 
 ---
 
-### &nbsp;5 · Switch Window Menu
+## 🧠 &nbsp;Control Modes
 
-> Page content slides away to reveal the menu hidden behind it.
+<br/>
 
-<div>
-  <img src="https://github.com/user-attachments/assets/238effd2-32e5-47db-98e9-50e9b6ba7bcd" width="400"/>
-  <img src="https://github.com/user-attachments/assets/ba82bb6c-c480-4780-a82f-fcab8819929c" width="400"/>
-</div>
+| Mode | Name | Description |
+|:---:|---|---|
+| `0` | **Bluetooth Control** | Manual driving via Bluetooth serial commands |
+| `1` | **Obstacle Avoidance** | Autonomous navigation using ultrasonic sensor |
+| `2` | **Voice Control** | Movement via predefined voice-based serial commands |
+
+> Switch between modes at any time using serial commands — no restart needed.
 
 <br/>
 
 ---
 
-### &nbsp;6 · Animated Menu
+## 🛠️ &nbsp;Hardware Components
 
-> Hamburger icon morphs into an ✖ with smooth CSS keyframe animation.
+<br/>
 
-<div>
-  <img src="https://github.com/user-attachments/assets/85cdd028-2a98-4b65-ad2d-a5308ac1f57c" width="400"/>
-  <img src="https://github.com/user-attachments/assets/925b2bcb-b1b1-4c4e-9cbd-70a29983c153" width="400"/>
-  <img src="https://github.com/user-attachments/assets/c2eaeded-2937-4b27-b8cb-24ebfebbd64e" width="400"/>
-</div>
+```
+┌────────────────────────────────────────────────────────┐
+│                    Hardware Stack                      │
+├──────────────────────────┬─────────────────────────────┤
+│  🧠  Microcontroller      │  Arduino Uno (ATmega328P)   │
+│  ⚡  Motor Driver         │  L293D Motor Shield         │
+│  🔄  Drive System         │  DC Motors + Robot Chassis  │
+│  📏  Distance Sensor      │  Ultrasonic HC-SR04         │
+│  🔁  Scanning Actuator    │  Servo Motor                │
+│  📶  Wireless Module      │  HC-05 / HC-06 Bluetooth    │
+│  🔌  Power                │  Battery Pack + Wires       │
+└──────────────────────────┴─────────────────────────────┘
+```
 
 <br/>
 
 ---
 
-## 🛠️ &nbsp;Tech Used
+## 💻 &nbsp;Software &amp; Libraries
 
-| Technology | Role |
+| Library | Purpose |
 |---|---|
-| `HTML5` | Structure and markup for all menu layouts |
-| `CSS3` | Transitions, transforms, and keyframe animations |
-| `CSS Variables` | Theming and easy color customization |
-| No JavaScript | All interactivity via `:checked` / `:hover` tricks |
+| `Servo.h` | Controls servo motor angle for sensor scanning |
+| `AFMotor.h` | Adafruit motor shield driver for DC motor control |
+| Arduino IDE | Development and upload environment |
+
+<br/>
+
+---
+
+## 🔄 &nbsp;How It Works
+
+```
+  1. Robot boots into Bluetooth Control Mode (default)
+              │
+              ▼
+  2. Serial command received → Mode Selector evaluates
+              │
+      ┌───────┴──────────────────────┐
+      │                              │
+      ▼                              ▼
+  Mode 1: Obstacle Avoidance     Mode 2: Voice Control
+      │                              │
+      ▼                              ▼
+  HC-SR04 measures front        Voice command parsed
+  distance continuously         via serial input
+      │                              │
+      ▼                              ▼
+  Servo scans LEFT / RIGHT      Sensor validates path
+      │                              │
+      ▼                              ▼
+  Compare distances →           Execute movement →
+  Turn toward safer side        Confirm with sensor
+              │
+              ▼
+  Motor Driver executes direction + speed via PWM
+```
+
+<br/>
+
+---
+
+## 📚 &nbsp;Learning Outcomes
+
+- Embedded systems fundamentals and real-time control flow
+- Multi-mode logic design and clean state switching
+- Working with sensors, servo motors, and DC actuators
+- Bluetooth serial communication on Arduino
+- Structured, maintainable code for hardware projects
+
+<br/>
+
+---
+
+## 🚀 &nbsp;Future Improvements
+
+| Status | Task |
+|---|---|
+| 🔲 Planned | Add LCD / OLED display for live mode &amp; status |
+| 🔲 Planned | Implement PWM-based speed control |
+| 🔲 Planned | Add line-following capability |
+| 🔲 Planned | Integrate ESP32 for Wi-Fi / IoT features |
+| 🔲 Planned | Improve obstacle detection accuracy with IR sensors |
+
+<br/>
+
+---
+
+## 📷 &nbsp;Demo &amp; Documentation
+
+<div align="center">
+
+<img width="1000" height="500" alt="Robot Car Demo" src="https://github.com/user-attachments/assets/2270ccef-4b2e-4e84-91cd-51c009b5cf40"/>
+
+<br/><br/>
+
+<img width="1000" height="800" alt="Robot Car Build" src="https://github.com/user-attachments/assets/6befe0e5-51a5-48b0-8933-a6a7ae43059b"/>
+
+</div>
 
 <br/>
 
@@ -174,16 +253,16 @@ This collection showcases a variety of navigation menus — from sliding sidebar
 
 ## 📜 &nbsp;License
 
-This project is open for **educational use**.
-The software is provided **"AS IS"** without any warranty.
+This project is open for **learning and educational purposes.**
+Feel free to study, fork, and build upon it. 🔧
 
 <br/>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a0a2e,50:2d1b5e,100:1a0a2e&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:0a1628,50:0d1f3c,100:0a0f1e&amp;height=100&amp;section=footer" width="100%"/>
 
-<sub>HTML5 · CSS3 · Keyframe Animations · 6 Menu Designs · Built at 13 · Learning in public</sub>
+<sub>Arduino Uno · L293D Shield · HC-SR04 · HC-05 · Servo Motor · C/C++</sub>
 
 <br/><br/>
 
